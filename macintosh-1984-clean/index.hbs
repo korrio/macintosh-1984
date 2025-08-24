@@ -1,0 +1,38 @@
+{{!< default}}
+
+<div class="article-list">
+    {{#foreach posts}}
+        <article class="article-item {{post_class}}">
+            <h2 class="article-title">
+                <a href="{{url}}">{{title}}</a>
+            </h2>
+            <div class="article-meta">
+                {{date format="MMMM D, YYYY"}}
+                {{#if primary_author}}
+                    • By {{primary_author.name}}
+                {{/if}}
+                {{#if reading_time}}
+                    • {{reading_time}} min read
+                {{/if}}
+            </div>
+            {{#if excerpt}}
+                <div class="article-excerpt">
+                    {{excerpt}}
+                </div>
+            {{else}}
+                <div class="article-excerpt">
+                    {{content words="50"}}
+                </div>
+            {{/if}}
+            {{#if primary_tag}}
+                <div class="article-tags">
+                    <span class="tag">{{primary_tag.name}}</span>
+                </div>
+            {{/if}}
+            <a href="{{url}}" class="read-more">Continue reading →</a>
+        </article>
+    {{/foreach}}
+
+    {{!-- Pagination --}}
+    {{pagination}}
+</div>

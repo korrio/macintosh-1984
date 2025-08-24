@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Birth of the Macintosh - Macintosh 1984</title>
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+    <style>
+        body {
+            font-family: Chicago, Monaco, monospace;
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border: 2px solid black;
+            padding: 0;
+        }
+        
+        .blog-header {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            border-bottom: 2px solid black;
+            position: relative;
+        }
+        
+        .blog-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            cursor: pointer;
+        }
+        
+        .blog-subtitle {
+            font-size: 12px;
+            margin: 5px 0 0 0;
+            opacity: 0.8;
+        }
+        
+        .window-controls {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        
+        .article-content {
+            padding: 20px;
+        }
+        
+        .article-header {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .article-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .article-tags {
+            margin-top: 10px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: black;
+            color: white;
+            padding: 2px 8px;
+            font-size: 10px;
+            margin-right: 5px;
+            text-transform: uppercase;
+        }
+        
+        .article-body {
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .article-body h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 30px 0 15px 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .article-body h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 25px 0 10px 0;
+        }
+        
+        .article-body p {
+            margin: 0 0 20px 0;
+        }
+        
+        .article-body ul, .article-body ol {
+            margin: 0 0 20px 20px;
+        }
+        
+        .article-body li {
+            margin-bottom: 5px;
+        }
+        
+        .article-body blockquote {
+            border-left: 4px solid black;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            background: #f8f8f8;
+            padding: 15px 20px;
+        }
+        
+        .article-image {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+        }
+        
+        .article-image img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid black;
+        }
+        
+        .article-image-caption {
+            font-size: 11px;
+            color: #666;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .article-footer {
+            border-top: 1px solid #ccc;
+            padding-top: 30px;
+            margin-top: 40px;
+        }
+        
+        .author-info {
+            background: #f8f8f8;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .author-name {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .author-bio {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding: 20px 0;
+            border-top: 1px solid #ccc;
+        }
+        
+        .nav-link {
+            font-size: 12px;
+            text-decoration: underline;
+            cursor: pointer;
+            max-width: 45%;
+        }
+        
+        .nav-prev::before {
+            content: "← ";
+        }
+        
+        .nav-next::after {
+            content: " →";
+        }
+        
+        .mac-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: black;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        .back-to-blog {
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        
+        .back-to-blog a {
+            text-decoration: underline;
+            color: black;
+            cursor: pointer;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid black;
+            background: #f0f0f0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <header class="blog-header">
+            <div class="window-controls">□ ▣</div>
+            <h1 class="blog-title">
+                <span class="mac-icon"></span>
+                Macintosh 1984
+            </h1>
+            <p class="blog-subtitle">The Computer That Changed Everything</p>
+        </header>
+        
+        <main class="article-content">
+            <div class="back-to-blog">
+                <a href="index.html">← Back to all posts</a>
+            </div>
+            
+            <article class="article-header">
+                <h1 class="article-title">The Birth of the Macintosh</h1>
+                <div class="article-meta">
+                    <strong>Published:</strong> January 24, 1984 • 
+                    <strong>By:</strong> Apple Computer Inc. • 
+                    <strong>Reading time:</strong> 8 minutes
+                </div>
+                <div class="article-tags">
+                    <span class="tag">History</span>
+                    <span class="tag">Apple</span>
+                    <span class="tag">Innovation</span>
+                    <span class="tag">1984</span>
+                </div>
+            </article>
+            
+            <div class="article-body">
+                <p><strong>On January 24, 1984, Apple Computer Inc. introduced the Macintosh, a revolutionary personal computer that would forever change the way people interact with technology.</strong> With its groundbreaking graphical user interface and mouse-driven navigation, the Macintosh represented a dramatic departure from the command-line interfaces that dominated personal computing at the time.</p>
+                
+                <div class="article-image">
+                    <div style="width: 300px; height: 200px; background: #ccc; margin: 0 auto; display: flex; align-items: center; justify-content: center; border: 2px solid black;">
+                        <span style="font-size: 12px; color: #666;">[Original Macintosh 128K]</span>
+                    </div>
+                    <div class="article-image-caption">The original Macintosh 128K, unveiled on January 24, 1984</div>
+                </div>
+                
+                <h2>A Vision Realized</h2>
+                
+                <p>The Macintosh project began in 1979 under the guidance of Jef Raskin, an Apple employee who envisioned an affordable, easy-to-use computer for the masses. Raskin named the project after his favorite apple variety, the McIntosh, though the spelling was changed to avoid trademark conflicts with the audio equipment manufacturer McIntosh Laboratory.</p>
+                
+                <blockquote>
+                    "The Macintosh was designed from the ground up to be different. We wanted to create a computer that was not just functional, but delightful to use." - Apple Development Team, 1984
+                </blockquote>
+                
+                <h2>Revolutionary Interface Design</h2>
+                
+                <p>What truly set the Macintosh apart was its revolutionary user interface, which drew inspiration from earlier work done at Xerox PARC. The Mac introduced several concepts that are now taken for granted in modern computing:</p>
+                
+                <ul>
+                    <li><strong>Desktop Metaphor:</strong> Files and folders were represented as icons on a virtual desktop</li>
+                    <li><strong>Point-and-Click Navigation:</strong> Users could interact with the computer using a mouse</li>
+                    <li><strong>Overlapping Windows:</strong> Multiple applications could run simultaneously in separate windows</li>
+                    <li><strong>Menu Bar:</strong> A consistent menu system across all applications</li>
+                    <li><strong>Trash Can:</strong> A visual metaphor for deleting files</li>
+                </ul>
+                
+                <h2>Technical Specifications</h2>
+                
+                <p>The original Macintosh 128K featured modest but revolutionary specifications for its time:</p>
+                
+                <ul>
+                    <li><strong>Processor:</strong> Motorola 68000 running at 8 MHz</li>
+                    <li><strong>Memory:</strong> 128 KB of RAM</li>
+                    <li><strong>Storage:</strong> 3.5-inch floppy disk drive (400 KB)</li>
+                    <li><strong>Display:</strong> Built-in 9-inch monochrome CRT (512×342 pixels)</li>
+                    <li><strong>Price:</strong> $2,495 (approximately $7,000 in today's money)</li>
+                </ul>
+                
+                <h3>The All-in-One Design</h3>
+                
+                <p>Unlike most computers of the era, the Macintosh featured an all-in-one design with the monitor, computer, and disk drive housed in a single compact unit. This design philosophy emphasized simplicity and portability, making the computer less intimidating to first-time users.</p>
+                
+                <h2>Market Reception and Impact</h2>
+                
+                <p>Despite its revolutionary interface, the original Macintosh faced several challenges in the marketplace. Its limited memory, lack of hard drive, and higher price point compared to IBM-compatible PCs initially limited its appeal to creative professionals and enthusiasts.</p>
+                
+                <p>However, the Macintosh's influence on the computing industry was profound and lasting. Its graphical user interface concepts were eventually adopted across the entire industry, with Microsoft's Windows operating system borrowing heavily from the Mac's interface paradigms.</p>
+                
+                <h2>Legacy and Evolution</h2>
+                
+                <p>The introduction of the Macintosh marked the beginning of a new era in personal computing. It proved that computers could be intuitive, accessible, and even enjoyable to use. The principles established with the original Mac—simplicity, elegance, and user-centered design—continue to influence Apple's products and the broader technology industry to this day.</p>
+                
+                <p>From the original 128K model to today's MacBook and iMac lines, the Macintosh has evolved tremendously while maintaining its core philosophy of making powerful technology accessible to everyone.</p>
+            </div>
+            
+            <div class="article-footer">
+                <div class="author-info">
+                    <div class="author-name">Apple Computer Inc.</div>
+                    <div class="author-bio">Founded in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne, Apple Computer Inc. has been at the forefront of personal computing innovation, creating products that combine cutting-edge technology with intuitive design.</div>
+                </div>
+                
+                <div class="navigation">
+                    <div class="nav-link nav-prev">The Pre-Macintosh Era: Lisa and Beyond</div>
+                    <div class="nav-link nav-next">The Super Bowl Commercial That Made History</div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>© 1984 Apple Computer Inc. • Celebrating 40 Years of Innovation</p>
+            <p>Built with System.css - Honoring the Classic Mac Experience</p>
+        </footer>
+    </div>
+</body>
+</html>

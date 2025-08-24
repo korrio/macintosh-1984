@@ -1,0 +1,482 @@
+/* Macintosh 1984 Ghost Theme Styles */
+
+:root {
+    --font-chicago: Chicago, "Helvetica Neue", Arial, sans-serif;
+    --font-monaco: Monaco, "Courier New", monospace;
+    --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    
+    /* Ghost font settings support */
+    --gh-font-heading: var(--font-chicago);
+    --gh-font-body: var(--font-chicago);
+}
+
+body {
+    font-family: var(--gh-font-body, var(--font-chicago));
+    margin: 0;
+    padding: 20px;
+    background: #f0f0f0;
+    line-height: 1.4;
+}
+
+.chicago-font {
+    --gh-font-heading: var(--font-chicago);
+    --gh-font-body: var(--font-chicago);
+}
+
+.monaco-font {
+    --gh-font-heading: var(--font-monaco);
+    --gh-font-body: var(--font-monaco);
+}
+
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border: 2px solid black;
+    padding: 0;
+}
+
+.blog-header {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+    position: relative;
+}
+
+.blog-title {
+    font-family: var(--gh-font-heading, var(--font-chicago));
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.blog-title a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-logo {
+    max-height: 30px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.blog-subtitle {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+    opacity: 0.8;
+}
+
+.window-controls {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.article-list {
+    padding: 20px;
+}
+
+.article-item {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.article-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.article-title {
+    font-family: var(--gh-font-heading, var(--font-chicago));
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.article-title a {
+    color: black;
+    text-decoration: none;
+}
+
+.article-title a:hover {
+    text-decoration: underline;
+}
+
+.article-meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.article-excerpt {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.article-tags {
+    margin: 10px 0;
+}
+
+.tag {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 2px 8px;
+    font-size: 10px;
+    margin-right: 5px;
+    text-transform: uppercase;
+}
+
+.read-more {
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+}
+
+.mac-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: black;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Article Content Styles */
+.article-content {
+    padding: 20px;
+}
+
+.back-to-blog {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.back-to-blog a {
+    text-decoration: underline;
+    color: black;
+}
+
+.article-header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.article-header .article-title {
+    font-family: var(--gh-font-heading, var(--font-chicago));
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.article-body {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body h6 {
+    font-family: var(--gh-font-heading, var(--font-chicago));
+}
+
+.article-body h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 0 15px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.article-body h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 25px 0 10px 0;
+}
+
+.article-body p {
+    margin: 0 0 20px 0;
+}
+
+.article-body ul, .article-body ol {
+    margin: 0 0 20px 20px;
+}
+
+.article-body li {
+    margin-bottom: 5px;
+}
+
+.article-body blockquote {
+    border-left: 4px solid black;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    background: #f8f8f8;
+    padding: 15px 20px;
+}
+
+.article-image {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+}
+
+.article-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid black;
+}
+
+.article-image-caption {
+    font-size: 11px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.article-footer {
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+    margin-top: 40px;
+}
+
+.author-info {
+    background: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.author-bio {
+    font-size: 12px;
+    color: #666;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+}
+
+.nav-link {
+    font-size: 12px;
+    max-width: 45%;
+}
+
+.nav-link a {
+    text-decoration: underline;
+    color: black;
+}
+
+.nav-prev::before {
+    content: "← ";
+}
+
+.nav-next::after {
+    content: " →";
+}
+
+/* Koenig Editor Required Classes */
+.kg-width-wide {
+    width: 85vw;
+    min-width: 100%;
+    margin: 30px auto;
+    border: 2px solid black;
+}
+
+.kg-width-full {
+    width: 100vw;
+    margin: 30px auto;
+    border: 2px solid black;
+}
+
+.kg-card {
+    margin: 20px 0;
+}
+
+.kg-embed-card {
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.kg-image-card {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.kg-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid black;
+}
+
+.kg-image-card figcaption {
+    font-size: 11px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+}
+
+.pagination a,
+.pagination .page-number {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 2px;
+    border: 1px solid black;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.pagination a:hover {
+    background: black;
+    color: white;
+}
+
+.pagination .page-number.current {
+    background: black;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid black;
+    background: #f0f0f0;
+    font-size: 12px;
+}
+
+.theme-version {
+    font-size: 10px;
+    color: #999;
+    margin-top: 10px;
+}
+
+.footer-nav {
+    margin-top: 15px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Author and Tag Pages */
+.author-header,
+.tag-header {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.author-title,
+.tag-title {
+    font-family: var(--gh-font-heading, var(--font-chicago));
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.author-description,
+.tag-description {
+    font-size: 14px;
+    color: #666;
+}
+
+.author-website {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.author-website a {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .blog-container {
+        border: 1px solid black;
+    }
+    
+    .article-list,
+    .article-content {
+        padding: 15px;
+    }
+    
+    .blog-header {
+        padding: 10px 15px;
+    }
+    
+    .window-controls {
+        right: 15px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-link {
+        max-width: 100%;
+    }
+    
+    .kg-width-wide,
+    .kg-width-full {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
