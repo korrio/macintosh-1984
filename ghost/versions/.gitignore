@@ -1,0 +1,10 @@
+# Ignore all node_modules in any Ghost version
+*/node_modules/
+node_modules/
+
+# Ignore built files
+*/built/
+
+# Ignore temporary files
+*.tmp
+*.temp

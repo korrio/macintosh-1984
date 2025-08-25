@@ -1,0 +1,18 @@
+# Ghost specific gitignore
+content/data/
+content/logs/
+content/apps/
+content/public/
+versions/*/node_modules/
+current/node_modules/
+node_modules/
+
+# Database files
+*.db
+*.sqlite
+
+# Configuration files with sensitive data
+config.*.json
+
+# Log files
+*.log

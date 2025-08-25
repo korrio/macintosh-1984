@@ -1,0 +1,459 @@
+/* Macintosh 1984 Theme Integration for Journal */
+
+:root {
+    /* Macintosh 1984 Color Palette */
+    --mac-black: #000000;
+    --mac-white: #ffffff;
+    --mac-gray: #c0c0c0;
+    --mac-light-gray: #f0f0f0;
+    --mac-dark-gray: #808080;
+    
+    /* Classic Mac Fonts */
+    --font-chicago: Chicago, "Helvetica Neue", Arial, sans-serif;
+    --font-monaco: Monaco, "Courier New", monospace;
+    --font-geneva: Geneva, -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Override Journal theme fonts */
+    --font-sans: var(--font-chicago);
+    --font-serif: var(--font-geneva);
+    
+    /* Mac-inspired spacing and sizing */
+    --mac-border-radius: 0px;
+    --mac-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Body and Global Styles */
+body {
+    font-family: var(--font-chicago);
+    background: var(--mac-light-gray);
+    background-image: 
+        linear-gradient(45deg, #f8f8f8 25%, transparent 25%), 
+        linear-gradient(-45deg, #f8f8f8 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #f8f8f8 75%), 
+        linear-gradient(-45deg, transparent 75%, #f8f8f8 75%);
+    background-size: 4px 4px;
+    background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+}
+
+/* Site Container */
+.gh-site {
+    background: var(--mac-white);
+    border: 2px solid var(--mac-black);
+    box-shadow: var(--mac-box-shadow);
+    margin: 20px;
+    border-radius: var(--mac-border-radius);
+}
+
+/* Header Styles */
+.gh-head {
+    background: var(--mac-black);
+    color: var(--mac-white);
+    border-bottom: 2px solid var(--mac-black);
+    position: relative;
+}
+
+.gh-head::before {
+    content: "⌐◨-◨";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--mac-white);
+}
+
+.gh-head-logo {
+    font-family: var(--font-chicago);
+    font-weight: bold;
+    color: var(--mac-white) !important;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.gh-head-logo::before {
+/*    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: var(--mac-white);
+    margin-right: 8px;
+    vertical-align: middle;*/
+}
+
+.gh-head-menu {
+    font-family: var(--font-chicago);
+}
+
+.gh-head-menu a {
+    color: var(--mac-white) !important;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gh-head-menu a:hover {
+    background: var(--mac-white);
+    color: var(--mac-black) !important;
+    padding: 4px 8px;
+    border-radius: var(--mac-border-radius);
+}
+
+/* Search and Action Buttons */
+.gh-search,
+.gh-head-btn,
+.gh-btn {
+    background: var(--mac-white) !important;
+    color: var(--mac-black) !important;
+    border: 1px solid var(--mac-black) !important;
+    padding: 6px 8px !important;
+    font-family: var(--font-chicago);
+    font-size: 11px !important;
+    text-transform: uppercase;
+    border-radius: var(--mac-border-radius);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+}
+
+.gh-search svg {
+    width: 16px !important;
+    height: 16px !important;
+    stroke: var(--mac-black) !important;
+    stroke-width: 2 !important;
+}
+
+.gh-search:hover,
+.gh-head-btn:hover,
+.gh-btn:hover {
+    background: var(--mac-gray) !important;
+    transform: translate(1px, 1px);
+    box-shadow: none;
+}
+
+.gh-search:hover svg {
+    stroke: var(--mac-black) !important;
+}
+
+/* Main Content Area */
+.gh-main {
+    background: var(--mac-white);
+    padding: 30px;
+    font-family: var(--font-chicago);
+}
+
+/* Card Styles */
+.gh-card {
+    border: 1px solid var(--mac-black);
+    background: var(--mac-white);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--mac-box-shadow);
+    border-radius: var(--mac-border-radius);
+}
+
+.gh-card-title {
+    font-family: var(--font-chicago);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--mac-black);
+}
+
+.gh-card-title a {
+    color: var(--mac-black);
+    text-decoration: none;
+}
+
+.gh-card-title a:hover {
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+.gh-card-excerpt {
+    font-family: var(--font-geneva);
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--mac-black);
+}
+
+.gh-card-meta {
+    font-family: var(--font-monaco);
+    font-size: 10px;
+    color: var(--mac-dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid var(--mac-gray);
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+/* Post Content */
+.gh-content {
+    font-family: var(--font-geneva);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.gh-content h1,
+.gh-content h2,
+.gh-content h3,
+.gh-content h4,
+.gh-content h5,
+.gh-content h6 {
+    font-family: var(--font-chicago);
+    font-weight: bold;
+    color: var(--mac-black);
+}
+
+.gh-content h2 {
+    font-size: 20px;
+    border-bottom: 2px solid var(--mac-black);
+    padding-bottom: 5px;
+    margin: 30px 0 15px 0;
+}
+
+.gh-content blockquote {
+    border-left: 4px solid var(--mac-black);
+    background: var(--mac-light-gray);
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    font-family: var(--font-geneva);
+}
+
+.gh-content code {
+    font-family: var(--font-monaco);
+    background: var(--mac-gray);
+    padding: 2px 4px;
+    font-size: 12px;
+    border: 1px solid var(--mac-black);
+}
+
+.gh-content pre {
+    background: var(--mac-black);
+    color: var(--mac-white);
+    padding: 20px;
+    font-family: var(--font-monaco);
+    font-size: 12px;
+    border: 2px solid var(--mac-black);
+    overflow-x: auto;
+}
+
+/* Images */
+.gh-content img {
+    border: 2px solid var(--mac-black);
+    box-shadow: var(--mac-box-shadow);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Featured Images */
+.gh-article-image img,
+.gh-feature-image img {
+    border: 2px solid var(--mac-black);
+    box-shadow: var(--mac-box-shadow);
+}
+
+/* Tags */
+.gh-tag {
+    background: var(--mac-black);
+    color: var(--mac-white);
+    padding: 3px 8px;
+    font-family: var(--font-chicago);
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 5px;
+    border-radius: var(--mac-border-radius);
+}
+
+.gh-tag:hover {
+    background: var(--mac-dark-gray);
+    color: var(--mac-white);
+}
+
+/* Author Info */
+.gh-author-image img {
+    border: 2px solid var(--mac-black);
+    border-radius: var(--mac-border-radius);
+    box-shadow: var(--mac-box-shadow);
+}
+
+.gh-author-name,
+.gh-author-name a {
+    font-family: var(--font-chicago);
+    font-weight: bold;
+    color: var(--mac-black);
+    text-decoration: none;
+}
+
+/* Pagination */
+.gh-pagination {
+    font-family: var(--font-chicago);
+    text-align: center;
+    margin: 40px 0;
+}
+
+.gh-pagination a,
+.gh-pagination .page-number {
+    background: var(--mac-white);
+    color: var(--mac-black);
+    border: 1px solid var(--mac-black);
+    padding: 8px 12px;
+    margin: 0 2px;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.gh-pagination a:hover {
+    background: var(--mac-black);
+    color: var(--mac-white);
+    transform: translate(1px, 1px);
+    box-shadow: none;
+}
+
+.gh-pagination .page-number.current {
+    background: var(--mac-black);
+    color: var(--mac-white);
+}
+
+/* Footer */
+.gh-foot {
+    background: var(--mac-light-gray);
+    border-top: 2px solid var(--mac-black);
+    font-family: var(--font-chicago);
+    font-size: 12px;
+    color: var(--mac-black);
+}
+
+.gh-copyright {
+    font-weight: bold;
+}
+
+.theme-version {
+    font-size: 10px;
+    color: var(--mac-dark-gray);
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.gh-foot-menu a {
+    color: var(--mac-black);
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.gh-foot-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Subscribe Section */
+.gh-subscribe {
+    background: var(--mac-gray) url("{{asset 'images/macintosh-bg.png'}}") center/cover;
+    background-image: url("../images/macintosh-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid var(--mac-black);
+    margin: 20px;
+    box-shadow: var(--mac-box-shadow);
+    position: relative;
+}
+
+.gh-subscribe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(192, 192, 192, 0.8);
+    z-index: 1;
+}
+
+.gh-subscribe > * {
+    position: relative;
+    z-index: 2;
+}
+
+.gh-subscribe-title {
+    font-family: var(--font-chicago);
+    font-weight: bold;
+    color: var(--mac-black);
+}
+
+.gh-subscribe-input {
+    background: var(--mac-white);
+    border: 2px solid var(--mac-black);
+    font-family: var(--font-geneva);
+    font-size: 13px;
+    box-shadow: var(--mac-box-shadow);
+}
+
+.gh-subscribe-input:hover {
+    background: var(--mac-light-gray);
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gh-site {
+        margin: 10px;
+        border: 1px solid var(--mac-black);
+    }
+    
+    .gh-main {
+        padding: 20px;
+    }
+    
+    .gh-head::before {
+        display: none;
+    }
+    
+    .gh-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+/* System.css Integration Overrides */
+.window {
+    border-color: var(--mac-black) !important;
+    box-shadow: var(--mac-box-shadow) !important;
+}
+
+.title-bar {
+    background: var(--mac-black) !important;
+    color: var(--mac-white) !important;
+    font-family: var(--font-chicago) !important;
+}
+
+.window-body {
+    background: var(--mac-white) !important;
+    font-family: var(--font-geneva) !important;
+}
+
+/* Additional Retro Effects */
+.gh-card:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Loading Animation for Retro Feel */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.loading::after {
+    content: "▮";
+    animation: blink 1s infinite;
+}
