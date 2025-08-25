@@ -1,0 +1,37 @@
+{
+  "url": "https://macintosh-1984-ghost.onrender.com",
+  "server": {
+    "port": 10000,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "DATABASE_HOST",
+      "user": "DATABASE_USER",
+      "password": "DATABASE_PASSWORD",
+      "database": "DATABASE_NAME",
+      "port": "DATABASE_PORT"
+    }
+  },
+  "mail": {
+    "transport": "SMTP",
+    "options": {
+      "service": "Mailgun",
+      "auth": {
+        "user": "MAILGUN_SMTP_LOGIN",
+        "pass": "MAILGUN_SMTP_PASSWORD"
+      }
+    }
+  },
+  "logging": {
+    "transports": ["stdout"]
+  },
+  "process": "systemd",
+  "paths": {
+    "contentPath": "./content/"
+  },
+  "privacy": {
+    "useUpdateCheck": false
+  }
+}

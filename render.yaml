@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: macintosh-1984-ghost
+    env: node
+    region: oregon
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: database__client
+        value: mysql
+      - key: database__connection__host
+        fromDatabase:
+          name: ghost-db
+          property: host
+      - key: database__connection__user
+        fromDatabase:
+          name: ghost-db
+          property: user
+      - key: database__connection__password
+        fromDatabase:
+          name: ghost-db
+          property: password
+      - key: database__connection__database
+        fromDatabase:
+          name: ghost-db
+          property: database
+      - key: database__connection__port
+        fromDatabase:
+          name: ghost-db
+          property: port
+      - key: url
+        value: https://macintosh-1984-ghost.onrender.com
+      - key: server__port
+        value: 10000
+      - key: server__host
+        value: 0.0.0.0
+
+databases:
+  - name: ghost-db
+    databaseName: ghost
+    user: ghost

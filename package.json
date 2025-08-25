@@ -1,0 +1,37 @@
+{
+  "name": "macintosh-1984-ghost",
+  "version": "1.0.1",
+  "description": "Ghost CMS with Macintosh 1984 theme for Render deployment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node current/index.js",
+    "build": "echo 'Build complete'",
+    "setup": "ghost install local --no-start --no-prompt",
+    "dev": "ghost start"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "ghost": "^5.87.0",
+    "ghost-cli": "^1.25.0",
+    "mysql2": "^3.6.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/macintosh-1984-ghost-theme.git"
+  },
+  "keywords": [
+    "ghost",
+    "cms",
+    "blog",
+    "macintosh",
+    "1984",
+    "retro",
+    "render"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
